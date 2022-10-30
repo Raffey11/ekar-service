@@ -1,4 +1,4 @@
-# ekar-service
+# Ekar Service
 
 ### This is a simple application that demonstrates Java conucrrency in a Spring Boot environment.
 
@@ -11,4 +11,7 @@
   
   
   
-The docker image for the ekar-service has been uploaded to DockerHub so this docker compose file will automtically pull the requisite images from DockerHub and start running them on your local host machine. You may view the docker image by clinking on [Docker Image Link](https://hub.docker.com/repository/docker/raffey/ekar-service):
+The docker image for the ekar-service has been uploaded to DockerHub so this docker compose file will automtically pull the requisite images from DockerHub and start running them on your local host machine. You may view the docker image by clinking on [Docker Image Link](https://hub.docker.com/repository/docker/raffey/ekar-service)
+
+
+
