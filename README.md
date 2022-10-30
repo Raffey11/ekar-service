@@ -12,6 +12,3 @@
   
   
 The docker image for the ekar-service has been uploaded to DockerHub so this docker compose file will automtically pull the requisite images from DockerHub and start running them on your local host machine. You may view the docker image by clinking on [Docker Image Link](https://hub.docker.com/repository/docker/raffey/ekar-service):
-
-
-
