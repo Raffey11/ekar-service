@@ -40,7 +40,7 @@ curl --location --request POST 'http://localhost:8081/v1.0/create' \
 #### cURL to execute the counter value reset:
 
 ```
-curl --location --request POST 'http://localhost:8081/v1.0/chnage-number?counter=50' \
+curl --location --request POST 'http://localhost:8081/v1.0/change-number?counter=50' \
 --data-raw ''
 ```
 
