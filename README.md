@@ -73,7 +73,7 @@ If you decide to start the service using the `docker-compose up` command, you wi
 <img width="1058" alt="Screen Shot 2022-10-30 at 12 14 13 PM" src="https://user-images.githubusercontent.com/41152148/198868026-c9888a60-3054-4c5e-b33b-64b20f2120c5.png">
 <img width="1440" alt="Screen Shot 2022-10-30 at 12 14 39 PM" src="https://user-images.githubusercontent.com/41152148/198867196-00354d66-c6a6-40d6-94f7-0d5030b408f5.png">
 
-In the `ekar_service` database, you will see 2 tables namely: `request_response_log` table responible for logging incoming requests of the 1st cURL that creates producer and consumer threads, and the `therad_timestamp` table which is responsible for logging the thread name which happens to increment or decrement the counter value and the timestamp at which it happens.
+In the `ekar_service` database, you will see 2 tables namely: `request_response_log` table responible for logging incoming requests of the 1st cURL that creates producer and consumer threads, and the `thread_timestamp` table which is responsible for logging the thread name which happens to increment or decrement the counter value and the timestamp at which it happens.
 
 <img width="1440" alt="Screen Shot 2022-10-30 at 12 26 57 PM" src="https://user-images.githubusercontent.com/41152148/198867476-05ee3278-42fe-4a3d-b89c-094fd5ff0387.png">
 
