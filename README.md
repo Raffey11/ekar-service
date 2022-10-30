@@ -65,14 +65,13 @@ If you decide to start the service using the `docker-compose up` command, you wi
 
 2) If you execute the cURL which creates the producer and consumer threads and again execute the same cURL while modifying the no. of consumers, you will see the following (you may notice the 2nd request having a different no. of producers and consumers which spawns a greater no. of consumers than producers and hence, the no. of consumers manage to decrement the value of the counter to 0 first):
 
-<img width="1440" alt="Screen Shot 2022-10-30 at 12 14 39 PM" src="https://user-images.githubusercontent.com/41152148/198867196-00354d66-c6a6-40d6-94f7-0d5030b408f5.png">
 <img width="1440" alt="Screen Shot 2022-10-30 at 12 15 29 PM" src="https://user-images.githubusercontent.com/41152148/198867200-97354592-a3f7-4bae-8a41-a433d5b847fb.png">
 <img width="1440" alt="Screen Shot 2022-10-30 at 12 15 33 PM" src="https://user-images.githubusercontent.com/41152148/198867206-06038be6-dedd-4e48-96e9-cc02ecddfff2.png">
 
 3) If you execute the cURL which resets the counter value you will see the following:
 
 <img width="1058" alt="Screen Shot 2022-10-30 at 12 14 13 PM" src="https://user-images.githubusercontent.com/41152148/198868026-c9888a60-3054-4c5e-b33b-64b20f2120c5.png">
-
+<img width="1440" alt="Screen Shot 2022-10-30 at 12 14 39 PM" src="https://user-images.githubusercontent.com/41152148/198867196-00354d66-c6a6-40d6-94f7-0d5030b408f5.png">
 
 In the `ekar_service` database, you will see 2 tables namely: `request_response_log` table responible for logging incoming requests of the 1st cURL that creates producer and consumer threads, and the `therad_timestamp` table which is responsible for logging the thread name which happens to increment or decrement the counter value and the timestamp at which it happens.
 
