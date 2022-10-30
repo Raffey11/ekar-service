@@ -21,7 +21,7 @@ The following images show the docker image being created and uploaded to DockerH
 <img width="1440" alt="Screen Shot 2022-10-30 at 11 54 05 AM" src="https://user-images.githubusercontent.com/41152148/198866392-c262c273-5ade-4082-a273-ae77dc013186.png">
 
 
-# Request cURL(s):
+## Request cURL(s):
 
 Once you the application up and running through either of the 2 ways mentioned earlier, you can use the following cURL(s) on your local host machine to execute the code flows of 
 the application:
@@ -45,3 +45,28 @@ curl --location --request POST 'http://localhost:8081/v1.0/change-number?counter
 ```
 
 ***Note that once the counter value has reached 0 or 100, you have to reset the value to any number between 0 - 100 otherwise the request to create thread(s) will not work and will return a response asking you to.***
+
+
+## Code Flows
+
+If you decide to start the service using the `docker-compose up` command, you will see the following:
+
+<img width="1440" alt="Screen Shot 2022-10-30 at 12 09 24 PM" src="https://user-images.githubusercontent.com/41152148/198866975-f112749e-97a8-4b32-be30-0519050f8a79.png">
+<img width="1440" alt="Screen Shot 2022-10-30 at 12 09 30 PM" src="https://user-images.githubusercontent.com/41152148/198866989-98f8a1f7-22fe-4d52-89b7-0f54e4d75180.png">
+
+
+1) If you execute the cURL which creates the producer and consumer threads, you will see the following:
+
+<img width="1440" alt="Screen Shot 2022-10-30 at 12 13 15 PM" src="https://user-images.githubusercontent.com/41152148/198867085-bb2c73af-9a4b-468f-bfbb-1e917cae8f01.png">
+<img width="1440" alt="Screen Shot 2022-10-30 at 12 13 19 PM" src="https://user-images.githubusercontent.com/41152148/198867097-f572c21c-c027-4a07-ad03-074caca13588.png">
+<img width="1440" alt="Screen Shot 2022-10-30 at 12 13 27 PM" src="https://user-images.githubusercontent.com/41152148/198867104-3c0e2160-ea6d-44f5-a30a-abba056adfc9.png">
+
+
+2) If you execute the cURL which creates the producer and consumer threads and again execute the same cURL while modifying the no. of consumers, you will see the following (you may notice the 2nd request having a different no. of producers and consumers which spawns a greater no. of consumers than producers and hence, the no. of consumers manage to decrement the value of the counter to 0 first):
+
+<img width="1440" alt="Screen Shot 2022-10-30 at 12 14 39 PM" src="https://user-images.githubusercontent.com/41152148/198867196-00354d66-c6a6-40d6-94f7-0d5030b408f5.png">
+<img width="1440" alt="Screen Shot 2022-10-30 at 12 15 29 PM" src="https://user-images.githubusercontent.com/41152148/198867200-97354592-a3f7-4bae-8a41-a433d5b847fb.png">
+<img width="1440" alt="Screen Shot 2022-10-30 at 12 15 33 PM" src="https://user-images.githubusercontent.com/41152148/198867206-06038be6-dedd-4e48-96e9-cc02ecddfff2.png">
+
+
+
