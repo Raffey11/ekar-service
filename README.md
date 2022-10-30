@@ -57,6 +57,7 @@ If you decide to start the service using the `docker-compose up` command, you wi
 
 1) If you execute the cURL which creates the producer and consumer threads, you will see the following:
 
+<img width="1056" alt="Screen Shot 2022-10-30 at 12 12 50 PM" src="https://user-images.githubusercontent.com/41152148/198867979-b933a60d-e98f-4579-8baa-dfb53dd50cd4.png">
 <img width="1440" alt="Screen Shot 2022-10-30 at 12 13 15 PM" src="https://user-images.githubusercontent.com/41152148/198867085-bb2c73af-9a4b-468f-bfbb-1e917cae8f01.png">
 <img width="1440" alt="Screen Shot 2022-10-30 at 12 13 19 PM" src="https://user-images.githubusercontent.com/41152148/198867097-f572c21c-c027-4a07-ad03-074caca13588.png">
 <img width="1440" alt="Screen Shot 2022-10-30 at 12 13 27 PM" src="https://user-images.githubusercontent.com/41152148/198867104-3c0e2160-ea6d-44f5-a30a-abba056adfc9.png">
@@ -67,6 +68,10 @@ If you decide to start the service using the `docker-compose up` command, you wi
 <img width="1440" alt="Screen Shot 2022-10-30 at 12 14 39 PM" src="https://user-images.githubusercontent.com/41152148/198867196-00354d66-c6a6-40d6-94f7-0d5030b408f5.png">
 <img width="1440" alt="Screen Shot 2022-10-30 at 12 15 29 PM" src="https://user-images.githubusercontent.com/41152148/198867200-97354592-a3f7-4bae-8a41-a433d5b847fb.png">
 <img width="1440" alt="Screen Shot 2022-10-30 at 12 15 33 PM" src="https://user-images.githubusercontent.com/41152148/198867206-06038be6-dedd-4e48-96e9-cc02ecddfff2.png">
+
+3) If you execute the cURL which resets the counter value you will see the following:
+
+<img width="1058" alt="Screen Shot 2022-10-30 at 12 14 13 PM" src="https://user-images.githubusercontent.com/41152148/198868026-c9888a60-3054-4c5e-b33b-64b20f2120c5.png">
 
 
 In the `ekar_service` database, you will see 2 tables namely: `request_response_log` table responible for logging incoming requests of the 1st cURL that creates producer and consumer threads, and the `therad_timestamp` table which is responsible for logging the thread name which happens to increment or decrement the counter value and the timestamp at which it happens.
