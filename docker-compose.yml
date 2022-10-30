@@ -1,0 +1,37 @@
+version: '3.7'
+
+services:
+
+  mysqldb:
+    image: mysql:latest
+    restart: always
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_DATABASE: ekar_service
+      MYSQL_USER: test
+      MYSQL_PASSWORD: test
+      MYSQL_ROOT_PASSWORD: root
+    networks:
+      - ekar-network
+
+  backend:
+    image: raffey/ekar-service:0.0.1-SNAPSHOT
+    depends_on:
+      - mysqldb
+    environment:
+      SPRING_DATASOURCE_URL: "jdbc:mysql://mysqldb:3306/ekar_service?serverTimezone=UTC"
+      SPRING_DATASOURCE_USERNAME: "test"
+      SPRING_DATASOURCE_PASSWORD: "test"
+      SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT: "org.hibernate.dialect.MySQL8Dialect"
+      SPRING_JPA_HIBERNATE_DDL-AUTO: "update"
+    ports:
+      - "8081:8081"
+    restart: always
+    networks:
+      - ekar-network
+
+#Docker Networks
+networks:
+  ekar-network:
+    driver: bridge
