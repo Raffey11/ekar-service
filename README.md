@@ -5,9 +5,9 @@
 #### There 2 ways in which you can use this code repository:
 
   
-  ***1): you can download the ekar-service code repository, change the spring.jpa.hibernate.ddl-auto to update in the application.properties file in the application directory***
+  <sub>1): you can download the ekar-service code repository, change the spring.jpa.hibernate.ddl-auto to update in the application.properties file in the application directory</sub>
   
-  ***2): you can download the ekar-service code repository and simply run the docker-compose.yml file in thr root directory of the project with the following command: `docker-compose up`***
+  <sub>2): you can download the ekar-service code repository and simply run the docker-compose.yml file in thr root directory of the project with the following command: `docker-compose up`</sub>
   
   
   
