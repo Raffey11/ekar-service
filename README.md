@@ -73,7 +73,7 @@ In the `ekar_service` database, you will see 2 tables namely: `request_response_
 
 <img width="1440" alt="Screen Shot 2022-10-30 at 12 26 57 PM" src="https://user-images.githubusercontent.com/41152148/198867476-05ee3278-42fe-4a3d-b89c-094fd5ff0387.png">
 
-##Conclusion
+## Conclusion
 
 As this simple app demonstrates how Java concurrency works, there are many ways in which this app could be improved. I'm going to list down a couple of them:
 
