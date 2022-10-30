@@ -70,3 +70,15 @@ If you decide to start the service using the `docker-compose up` command, you wi
 
 
 In the `ekar_service` database, you will see 2 tables namely: `request_response_log` table responible for logging incoming requests of the 1st cURL that creates producer and consumer threads, and the `therad_timestamp` table which is responsible for logging the thread name which happens to increment or decrement the counter value and the timestamp at which it happens.
+
+<img width="1440" alt="Screen Shot 2022-10-30 at 12 26 57 PM" src="https://user-images.githubusercontent.com/41152148/198867476-05ee3278-42fe-4a3d-b89c-094fd5ff0387.png">
+
+##Conclusion
+
+As this simple app demonstrates how Java concurrency works, there are many ways in which this app could be improved. I'm going to list down a couple of them:
+
+1) use flyway intializer to write SQL migration scripts that will create tables in the MySQL DB. This will help keep a record of the craetion and changes that have taken place at a DB level
+2) use a Spring Cloud Config Server which will store the configuration properties of the app according to the profile environment which currently up and active.
+3) use a Spring Cloud API Gateway which can log and trace every incoming request that hits the server and forwards it to the relevant service attached to it. This will also require setting up Spring Eureka Server or any Service Discovery Server like Consul, Zookeeper, etcd etc. This will help the services use Spring Cloud Load Balancer and enable load balancing the requests.
+
+Any further suggestions would be highly appreciated.
